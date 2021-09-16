@@ -34,9 +34,7 @@ EPSILON_END = 0.01
 
 ############################################### 
 
-# Additional Template Codes                   # 
-
-# You may or may not use below skeleton code. # 
+#  Codes 
 
 ############################################### 
 
@@ -284,6 +282,18 @@ class PacmanDQN(PacmanUtils):
                 torch.save(self.pred_q, self.model) 
                 pass 
 
+	
+	
+'''
+Input Variable 5가지를 전처리 하기 위해 Pacman.py의 Gamestate 안의 함수들을 이용 
+(1) 팩맨의 위치: state.getPacmanPosition() 함수로 호출 후 튜플 형태로 저장
+(2) 고스트 위치: state.getGhostPositions() 함수로 호출 후 튜플 형태로 저장
+(3) Food 위치: 팩맨의 위치와 Food의 위치를 L1 Distance 방식으로 거리를 구한 뒤 둘 중 Min 값을 호출 후 저장. 만약 Food가 하나만 남을 경우 남은 Food의 위치를 부르고 Food가 다 없어질 경우 게임이 끝난 경우이기에 팩맨의 위치를 호출
+(4) 벽 위치: 팩맨 위치에 따른 벽의 위치를 확인하기 위해 state.hasWall() 함수를 이용한다.
+팩맨의 상하좌우 위치 좌표를 넣으면 True or False 값으로 나오는데 True면 1, False 면 0을 Return 시켜 List 형태로 저장하여 값을 반환
+(5) 고스트가 겁 먹었는지 여부: state.getScaredTimer()를 통해 True면 1, False 면 0을 반환
+'''	
+	
     def preprocess(self, state): 
 
         def pacman_position(state):
