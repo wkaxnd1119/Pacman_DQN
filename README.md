@@ -1,4 +1,4 @@
-# Pacman_DQN
+# Reinforcement Learning by Pytorch
 
 Using Reinforcement Learning(DQN) to play Pacman. 
 
