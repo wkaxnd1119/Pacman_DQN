@@ -5,9 +5,7 @@ Using Reinforcement Learning(DQN) to play Pacman.
 ![image](https://user-images.githubusercontent.com/85381860/143868194-a6a59d24-0195-4d4f-8e11-040de86aa3cd.png)
 
 
-
-### ################################설명################################
-환경 및 구현 알고리즘 설명
+# 환경 및 구현 알고리즘 설명
 1. DQN Network 설정
 DQN 학습 Network를 위해 Fully Connected Layer 를 3개 (Input, Hidden, Output) 로 간단하게 설정하였다. Input Layer의 size는 (11 x 32), Hidden Layer의 size는 (32 x 64), Output Layer의 size는 (64 x 4)다. 
 Loss function은 pytorch의 L1loss를 구하는 함수 nn.SmoothL1Loss()를 사용하였다. 
