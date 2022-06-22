@@ -46,4 +46,6 @@ self.q_target.load_state_dict(self.pred_q.state_dict())
 
 
 <DQN 성능>
+![image](https://user-images.githubusercontent.com/85381860/175031645-17d661ee-20e6-44e7-902d-84befdc498be.png)
+
  
